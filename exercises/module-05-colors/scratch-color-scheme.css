@@ -17,3 +17,89 @@
    7. .btn-secondary — background transparent, border var(--secondary), color var(--secondary)
    8. .site-footer — background var(--secondary), white text, text-align center, padding
    ============================================ */
+/* Task 1 – Define 5 CSS custom properties */
+:root {
+  --primary: #a93f3f;  
+  --secondary: #d2af91;    
+  --accent: #ffc107;       
+  --bg: #f8f9fa;           
+  --text: #5d5f60;         
+}
+
+/* Task 2 – body styles */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: roboto;
+}
+
+/* Task 3 – .site-header styles */
+.site-header {
+  background-color: var(--primary);
+  padding: 20px;           
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header nav, 
+.site-header ul {
+  display: flex;
+  gap: 5px;            
+  list-style: none;     
+  margin: 0;
+  padding: 0;
+}
+
+/* Task 4 – .site-header a links */
+.site-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;      
+  font-size: 1.1rem;     
+  padding: 8px 16px;     
+  border-radius: 4px;    
+  transition: all 0.2s; 
+}
+
+.site-header a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Task 5 – .content layout */
+.content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Task 6 – .btn-primary styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;      
+  border-radius: 50px;      
+  border: none;            
+  cursor: pointer;
+}
+
+/* Task 7 – .btn-secondary styles */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--secondary); 
+  color: var(--secondary);
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Task 8 – .site-footer styles */
+.site-footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
