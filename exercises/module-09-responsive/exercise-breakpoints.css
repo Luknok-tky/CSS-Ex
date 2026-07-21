@@ -14,16 +14,18 @@
   color: red;
 }
 
+@media (min-width: 640px) {
+  .responsive-text {
+    color: orange;
+  }
+
 @media (min-width: 768px) {
   .responsive-text {
     color: green;
   }
 }
 
-@media (min-width: 640px) {
-  .responsive-text {
-    color: orange;
-  }
+
 }
 
 
@@ -35,6 +37,12 @@
 
 .mobile-text {
   font-size: 1rem;
+}
+
+@media (min-width: 480px) {
+  .mobile-text {
+    font-size: 1.25rem;
+  }
 }
 
 
@@ -54,4 +62,10 @@
   background: #dfe6e9;
   padding: 24px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
 }

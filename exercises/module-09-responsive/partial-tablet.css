@@ -26,3 +26,8 @@
    Add a media query for max-width: 767px that makes the layout stack.
    Change .responsive-layout to flex-direction: column.
 */
+@media (max-width: 767px) {
+  .responsive-layout {
+    flex-direction: column;
+  }
+}

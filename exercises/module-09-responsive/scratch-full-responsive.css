@@ -24,3 +24,91 @@
    12. body — max-width 1000px, margin auto
    13. .post — font-size 1.125rem
    ============================================ */
+/* 1. Universal Reset */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* 2. Body */
+body {
+   font-family: sans-serif;
+   line-height: 1.6;
+   padding: 16px;
+}
+
+/* 3. Site Header */
+.site-header {
+   text-align: center;
+   margin-bottom: 24px;
+}
+
+/* 4. Navigation */
+.nav {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   align-items: center;
+}
+
+/* 5. Navigation Links */
+.nav a {
+   text-decoration: none;
+   color: #0984e3;
+}
+
+/* 6. Content Area */
+.content-area {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+/* 7. Sidebar Widget */
+.sidebar-widget {
+   background: #f4f4f4;
+   padding: 16px;
+   text-align:center;
+}
+
+/*TABLET (min-width: 768px) */
+@media (min-width: 768px) {
+   /* 8. Nav horizontal */
+   .nav {
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+   }
+
+   /* 9. Content Area horizontal */
+   .content-area {
+      flex-direction: row;
+   }
+
+   /* 10. Post width ratio */
+   .post {
+      flex: 2;
+   }
+
+   /* 11. Sidebar width ratio */
+   .sidebar {
+      flex: 2;
+   }
+}
+
+/* DESKTOP (min-width: 1024px) */
+@media (min-width: 1024px) {
+   /* 12. Body max-width & center */
+   body {
+      max-width: 1000px;
+      margin: 0 auto;
+   }
+
+   /* 13. Larger post font */
+   .post {
+      font-size: 1.125rem;
+   } 
+}
+
+
