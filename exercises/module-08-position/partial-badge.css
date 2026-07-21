@@ -6,16 +6,16 @@
 
 /* Task 1 — Badge positioned in top-right corner of product card */
 .product-card {
-  _____: relative;
+  position: relative;
   border: 1px solid #ddd;
   padding: 16px;
   max-width: 300px;
 }
 
 .product-card__badge {
-  _____: absolute;
-  _____: 10px;
-  _____: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   background: #d63031;
   color: white;
   padding: 4px 12px;
@@ -26,7 +26,7 @@
 
 /* Task 2 — Tooltip appears above the trigger on hover */
 .tooltip-trigger {
-  _____: relative;
+  position: relative;
   display: inline-block;
   background: #0984e3;
   color: white;
@@ -35,9 +35,9 @@
 }
 
 .tooltip-trigger__tip {
-  _____: absolute;
-  _____: -40px;
-  _____: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
   transform: translateX(-50%);
   background: #2d3436;
   color: white;
@@ -54,9 +54,9 @@
 
 /* Task 3 — "Back to Top" button fixed to bottom-right of viewport */
 .back-to-top {
-  _____: fixed;
-  _____: 20px;
-  _____: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background: #2d3436;
   color: white;
   padding: 12px 20px;

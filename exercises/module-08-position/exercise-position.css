@@ -25,6 +25,7 @@
 }
 
 .page-main {
+  margin-top: 60px;
   background: #f8f8f8;
   min-height: 100vh;
   padding: 24px;
@@ -38,6 +39,7 @@
 */
 
 .card-with-badge {
+  position: relative;
   border: 1px solid #ddd;
   padding: 24px;
   border-radius: 8px;
@@ -45,6 +47,9 @@
 }
 
 .badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   background: #e17055;
   color: white;
   padding: 4px 12px;
@@ -65,6 +70,7 @@
 }
 
 .sidebar {
+  position: sticky;
   width: 200px;
   background: #dfe6e9;
   padding: 16px;
