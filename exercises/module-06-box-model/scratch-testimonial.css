@@ -27,7 +27,7 @@
    font-style: italic;
    font-size: 1.15rem;
    line-height: 1.7;
-   color #333;
+   color: #333;
    margin-bottom: 24px;
 }
 
@@ -61,5 +61,5 @@
 /* 7. .testimonial__role */
 .testimonial__role{
    font-size: 0.85rem; 
-   color #888;
+   color: #888;
 }
