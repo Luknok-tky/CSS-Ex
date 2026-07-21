@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f4f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card-container {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 960px;
+  padding: 40px;
+  
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.blue-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 97%;            
+  height: 97%;           
+  background-color: #0071bc;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 97.5%;            
+  height: 97.5%;
+  object-fit: cover;
+  border-radius: 28px;
+  z-index: 2;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  color: #0f172a;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.description {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 28px;
+  max-width: 500px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #85c2e0; 
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1.5px solid #0f172a;
+  border-radius: 10px;
+  
+  box-shadow: 2px 2px 0px #0f172a;
+  transform: translate(2px, 2px);
+}
+
+.cta-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #0f172a;
+}
+
+.arrow {
+  font-size: 1rem;
+}
