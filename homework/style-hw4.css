@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f4f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px; 
+}
+
+.impact-card {
+  background-color: #ffffff;
+  border: 1px solid #0c1c24;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 960px;
+  padding: 24px 36px; 
+}
+
+.card-header {
+  margin-bottom: 20px; 
+}
+
+.sub-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #334155;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.main-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0c1c24;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  max-width: 600px;
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px; 
+  margin-bottom: 20px; 
+}
+
+.col-title {
+  font-size: 1.5rem; 
+  font-weight: 800;
+  color: #0c1c24;
+  margin-bottom: 6px;
+}
+
+.col-desc {
+  font-size: 0.8rem;
+  color: #334155;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  min-height: 34px;
+}
+
+.col-subdesc {
+  font-size: 0.8rem;
+  color: #0c1c24;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.stat-group {
+  margin-bottom: 14px; 
+}
+
+.stat-caption {
+  font-size: 0.75rem;
+  color: #0c1c24;
+  line-height: 1.3;
+  margin-top: 6px;
+}
+
+.stat-caption.bold {
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-block;
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 6px 14px;
+  line-height: 1;
+}
+
+.badge-blue {
+  background-color: #0071bc;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.badge-green {
+  background-color: #2bb673;
+  color: #0c1c24;
+  font-size: 1.8rem;
+}
+
+.yellow-badges-row {
+  display: flex;
+  gap: 8px;
+}
+
+.yellow-item {
+  flex: 1;
+}
+
+.badge-yellow {
+  background-color: #f7d147;
+  color: #0c1c24;
+  font-size: 1.3rem;
+  padding: 6px 8px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.yellow-item .stat-caption {
+  font-size: 0.68rem;
+}
+
+.card-footer {
+  margin-top: 8px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #0c1c24;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1.5px solid #0c1c24;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px #0c1c24;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cta-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #0c1c24;
+}
+
+.arrow {
+  font-size: 1rem;
+}
