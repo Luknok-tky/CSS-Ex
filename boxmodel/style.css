@@ -1,0 +1,13 @@
+div{
+    padding: 32px 64px 18px;
+    box-sizing: border-box;
+    border: 10px blueviolet solid;
+    border-radius: 40px;
+    margin: 0px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}

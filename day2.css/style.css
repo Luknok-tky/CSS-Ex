@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 600px;
+    flex-wrap: wrap;
+}
+
+.box {
+  margin: 8px;  
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  font: bold;
+  color: yellowgreen;
+  font-size: 42px;
+}
