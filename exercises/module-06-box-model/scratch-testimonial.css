@@ -32,14 +32,14 @@
 }
 
 /* 3. .testimonial__author */
-.testimonial__author{
+.testimonial__author {
    display: flex;
    align-items: center;
    gap: 12px;
 }
 
 /* 4. .testimonial__avatar */
-.testimonial__avatar{
+.testimonial__avatar {
    width: 60px; 
    height: 60px; 
    border-radius: 50%; 
@@ -47,19 +47,19 @@
 }
 
 /* 5. .testimonial__info */
-.testimonial__info{
+.testimonial__info {
    display: flex; 
    flex-direction:column;
 }
 
 /* 6. .testimonial__name */
-.testimonial__name{
+.testimonial__name {
    font-weight: bold;
    font-size: 1rem;
 }
 
 /* 7. .testimonial__role */
-.testimonial__role{
+.testimonial__role {
    font-size: 0.85rem; 
    color: #888;
 }
