@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchA land -- ความสุขในทุกๆ วัน</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">MatchA land <span>-- ความสุขในทุกๆ วัน</span></a>
+      <nav class="nav-links">
+        <a href="#products">ผงมัทฉะ</a>
+        <a href="#accessories">อุปกรณ์ชงชา</a>
+        <a href="#upcoming">สินค้าใหม่</a>
+      </nav>
+    </div>
+  </header>
+
+<style>
+    /* ==========================================================================
+       1. VARIABLES & RESET (Muji & Minimal Theme)
+       ========================================================================== */
+    :root {
+      --bg-color: #F8F6F0;          
+      --card-bg: #FFFFFF;           
+      --primary-green: #5B6E50;     
+      --primary-hover: #48583E;
+      --text-main: #2D312E;         
+      --text-muted: #737A74;
+      --accent-wood: #C5B39B;       
+      --font-base: 'Prompt', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-base);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       2. NAVBAR
+       ========================================================================== */
+    .navbar {
+      background: rgba(248, 246, 240, 0.95);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #EAE6DF;
+      padding: 16px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--primary-green);
+      font-weight: 300;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-green);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 60px 0;
+      background-color: #F8F6F0;
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #EAE6DF;
+    }
+
+    .hero-text h1 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      color: var(--text-main);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-video-box {
+      background: #FFFFFF;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #EAE6DF;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       4. BUTTONS & UI COMPONENTS
+       ========================================================================== */
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--primary-green);
+      color: #FFFFFF;
+      padding: 12px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      width: 100%;
+      background-color: transparent;
+      color: var(--primary-green);
+      border: 1px solid var(--primary-green);
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-green);
+      color: #FFFFFF;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    /* ==========================================================================
+       5. TASTE PROFILES & PRODUCTS GRID
+       ========================================================================== */
+    .taste-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 50px;
+    }
+
+    .taste-card {
+      background: var(--card-bg);
+      padding: 32px 24px;
+      border-radius: 8px;
+      border: 1px solid #EAE6DF;
+      text-align: center;
+    }
+
+    .taste-card h3 {
+      font-size: 1.2rem;
+      color: var(--primary-green);
+      margin-bottom: 10px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #EAE6DF;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img-wrapper {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      background-color: #F2EFE9;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .img-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: var(--primary-green);
+      color: #FFF;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .product-card h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+      flex-grow: 1;
+    }
+
+    .product-card .price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    /* ==========================================================================
+       6. UPCOMING PRODUCT & FOOTER
+       ========================================================================== */
+    .upcoming-section {
+      background-color: #EFECE6;
+      padding: 80px 0;
+    }
+
+    .upcoming-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .upcoming-img img {
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .upcoming-content .tag {
+      color: var(--primary-green);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .upcoming-content h2 {
+      font-size: 2rem;
+      margin: 12px 0;
+      font-weight: 450;
+    }
+
+    .upcoming-content p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .footer {
+      background-color: #262927;
+      color: #D5D8D6;
+      padding: 40px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand h3 {
+      color: #FFF;
+    }
+
+    .footer-brand span {
+      color: #8CA081;
+    }
+
+    /* ==========================================================================
+       7. LIVE CHAT WIDGET
+       ========================================================================== */
+    .chat-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+    }
+
+    .chat-toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-family: var(--font-base);
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    .chat-toggle-btn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .chat-box {
+      display: none;
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+      width: 320px;
+      background-color: var(--card-bg);
+      border: 1px solid #EAE6DF;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+
+    .chat-box.active {
+      display: block;
+    }
+
+    .chat-header {
+      background-color: #EFECE6;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #EAE6DF;
+    }
+
+    .chat-brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .chat-avatar {
+      font-size: 1.5rem;
+      background: #FFF;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .chat-header h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .chat-header p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .chat-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .chat-body {
+      padding: 16px;
+    }
+
+    .chat-welcome {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .chat-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid #EAE6DF;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .chat-option:hover {
+      background-color: var(--bg-color);
+    }
+
+    .chat-text strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .chat-text small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       8. RESPONSIVE BREAKPOINTS (1200, 991, 768, 678, 480, 380)
+       ========================================================================== */
+    @media (max-width: 1200px) {
+      .container { max-width: 960px; }
+    }
+
+    @media (max-width: 991px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-container { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .taste-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .upcoming-container { grid-template-columns: 1fr; gap: 28px; }
+      .footer-content { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+    @media (max-width: 678px) {
+      .hero-text h1 { font-size: 1.75rem; }
+      .section { padding: 50px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-card { padding: 10px; }
+      .chat-widget { bottom: 16px; right: 16px; }
+      .chat-box { width: calc(100vw - 32px); }
+      .chat-toggle-btn span { display: none; }
+      .chat-toggle-btn { padding: 14px; border-radius: 50%; }
+    }
+
+    @media (max-width: 380px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>สร้างช่วงเวลาแห่งความสงบ ในทุกแก้วที่คุณชง</h1>
+        <p>คัดสรรผงมัทฉะเกรดพรีเมียมจากญี่ปุ่น และอุปกรณ์ชงชาดีไซน์มินิมอล</p>
+        <a href="#products" class="btn-primary">เลือกชมสินค้า</a>
+      </div>
+      <div>
+        <img src="https://chaodoi.co.th/wp-content/uploads/2024/02/6.jpg" alt="MatchA land" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Matcha Taste Profiles -->
+  <section class="container section">
+    <div class="section-title">
+      <h2>ค้นหารสชาติมัทฉะในแบบของคุณ</h2>
+      <p>เลือกตามรสชาติที่คุณชื่นชอบ</p>
+    </div>
+    <div class="taste-grid">
+      <div class="taste-card">
+        <h3>Umami & Savory</h3>
+        <p>หอมกลมกล่อม โทนสาหร่าย ไม่ฝาดขม เหมาะสำหรับดื่มเคลียมัทฉะ</p>
+      </div>
+      <div class="taste-card">
+        <h3>Nutty & Roasted</h3>
+        <p>หอมกลิ่นถั่ว ดื่มง่าย ละมุน<br> บอดี้ปานกลาง</p>
+      </div>
+      <div class="taste-card">
+        <h3>Bittersweet & Rich</h3>
+        <p>เข้มข้น มีความฝาดปลาย<br> เหมาะมากสำหรับทำ Matcha Latte</p>
+      </div>
+        <div class="taste-card">
+        <h3>Floral & Fruity</h3>
+        <p>หอมกลิ่นดอกไม้/ผลไม้<br> มีความสดชื่น บอดี้เบา</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section id="products" class="container section">
+    <div class="section-title">
+      <h2>สินค้าแนะนำ</h2>
+      <p>ผงมัทฉะคุณภาพและอุปกรณ์ชงชาครบครัน</p>
+    </div>
+
+<div class="product-grid">
+      <!-- 1. Uji Ceremonial Matcha -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://matchazuki.com/wp-content/uploads/2021/05/Matchazuki%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%A1-23604-6-1-2.jpg" alt="Uji Ceremonial Matcha 50g">
+        </div>
+        <span class="badge">Best Seller</span>
+        <h3>Uji Ceremonial Matcha 30g</h3>
+        <p class="price">฿790</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 2. แปรงชงมัทฉะ (Chasen) -->
+      <div class="product-card" id="accessories">
+        <div class="img-wrapper">
+          <img src="https://nakaimatcha.com/cdn/shop/files/2031.jpg?v=1772273225&amp;width=2048" alt="แปรงชงมัทฉะ (Chasen)">
+        </div>
+        <h3>แปรงชงมัทฉะไม้ไผ่<br> (Chasen) </h3>
+        <p class="price">฿350</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 3. แปรงชงมัทฉะ แบบพลาสติก -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://down-th.img.susercontent.com/file/sg-11134201-7rav6-malbxf52n0wz1c" alt="แปรงชงมัทฉะ แบบพลาสติก">
+        </div>
+        <h3>แปรงชงมัทฉะพลาสติก<br> (Chasen) </h3>
+        <p class="price">฿290</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 4. ถ้วยชงมัทฉะ (Chawan) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://image.makewebeasy.net/makeweb/0/aSAKumEHs/etc/6_3.jpg" alt="ถ้วยชงมัทฉะ (Chawan)">
+        </div>
+        <h3>ถ้วยชงมัทฉะ<br> (Chawan)</h3>
+        <p class="price">฿490</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 5. ช้อนตักผงมัทฉะ (Matcha Bamboo Scoop) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://thehomebarista.com/wp-content/uploads/2018/03/MATCHA-ACCESSORIES-Matcha-Bamboo-Scoop-1.jpg" alt="ช้อนตักผงมัทฉะ">
+        </div>
+        <h3>ช้อนตักผงมัทฉะ<br> (Bamboo Scoop)</h3>
+        <p class="price">฿290</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 6. กระชอนร่อนผงชา (Matcha Sifter) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUBcv7FR6Ay-n8gKtKREz3vNXQKJrd47cOgyBuJ0m95RSOxp4VFTofKBy&amp;s=10" alt="กระชอนร่อนผงชา">
+        </div>
+        <h3>กระชอนร่อนผงชา<br> (Matcha Sifter)</h3>
+        <p class="price">฿290</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+      <!-- 7. ลูกร่อนผงชา (Matcha Sifter) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbcPszkncgyYMcA_pmDlw1l2vVH-a5snSDP7Q8MWnaezgtIOD_sUuWU0Iy&amp;s=10" alt="ลูกร่อนผงชา">
+        </div>
+        <h3>ลูกร่อนผงชา<br> (Matcha Sifter)</h3>
+        <p class="price">฿150</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+    
+        <!-- 8. เครื่องชั่งน้ำหนักดิจิทัล (Digital Scale)-->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://hoffmanncoffee.com/cdn/shop/files/th-11134207-81ztp-mnk7j2gizw8x6d_900x.jpg?v=1780012536" alt="เครื่องชั่งน้ำหนักดิจิทัล">
+        </div>
+        <h3>เครื่องชั่งน้ำหนักดิจิทัล<br> (Digital Scale)</h3>
+        <p class="price">฿590</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+
+        <!-- 9. แผ่นยางรอง (Bar Mat) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuXUnzZjkrnfsDlCqSk4wXVA5hL0-U0szS7Utz6bGivNkppgliaDh0o2G1&amp;s=10" alt="แผ่นยางรอง Bar Mat">
+        </div>
+        <h3>แผ่นยางรอง<br> (Bar Mat)</h3>
+        <p class="price">฿580</p>
+        <button class="btn-secondary">ดูรายละเอียด</button>
+      </div>
+    </div>
+    </section>
+
+  <!-- Upcoming Product Section -->
+  <section id="upcoming" class="upcoming-section">
+    <div class="container upcoming-container">
+      <div class="upcoming-img">
+        <img src="https://th-test-11.slatic.net/p/10e0bbff8da3798ae679fa28533247b2.jpg" alt="Silicone Ice Mold">
+      </div>
+      <div class="upcoming-content">
+        <span class="tag">Coming Soon</span>
+        <h2>ถาดซิลิโคนทำน้ำแข็ง (Silicone Ice Mold)</h2>
+        <p>ออกแบบสำหรับเครื่องดื่มเย็นโดยเฉพาะ<br> น้ำแข็งเนื้อละเอียด ละลายช้า ไม่ทำให้รสชาติเจือจาง</p>
+        <button class="btn-primary">ลงชื่อรับการแจ้งเตือน</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Live Chat Widget -->
+  <div class="chat-widget">
+    <button class="chat-toggle-btn" id="chatToggle" aria-label="เปิดช่องทางติดต่อแชท">
+      💬 <span>ปรึกษา / ติดต่อเรา</span>
+    </button>
+
+    <div class="chat-box" id="chatBox">
+      <div class="chat-header">
+        <div class="chat-brand">
+          <div class="chat-avatar">🍵</div>
+          <div>
+            <h4>MatchA land Support</h4>
+            <p>สอบถามสินค้า หรือแจ้งปัญหาได้เลยนะคะ</p>
+          </div>
+        </div>
+        <button class="chat-close-btn" id="chatClose">&times;</button>
+      </div>
+
+      <div class="chat-body">
+        <p class="chat-welcome">ยินดีต้อนรับค่ะ! เลือกช่องทางติดต่อได้ทันที:</p>
+        
+        <a href="https://line.me" target="_blank" class="chat-option">
+          <span class="chat-icon">💬</span>
+          <div class="chat-text">
+            <strong>LINE Official Account</strong>
+            <small>ตอบไวที่สุด (09:00 - 18:00 น.)</small>
+          </div>
+        </a>
+
+        <a href="https://m.me" target="_blank" class="chat-option">
+          <span class="chat-icon">⚡</span>
+          <div class="chat-text">
+            <strong>Facebook Messenger</strong>
+            <small>สอบถามรายละเอียดเพิ่มเติม</small>
+          </div>
+        </a>
+
+        <a href="tel:021234567" class="chat-option">
+          <span class="chat-icon">📞</span>
+          <div class="chat-text">
+            <strong>โทรคุยกับเรา</strong>
+            <small>กรณีเร่งด่วน / สินค้ามีปัญหา</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>MatchA <span>land</span></h3>
+        <p>ยินดีที่ได้เป็นส่วนหนึ่งของคนรักมัทฉะ  ʕ•ᴥ•ʔﾉ♡</p>
+      </div>
+      <p>© 2026 MatchA land. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script สำหรับเปิด/ปิด แชท -->
+  <script>
+    const chatToggle = document.getElementById('chatToggle');
+    const chatBox = document.getElementById('chatBox');
+    const chatClose = document.getElementById('chatClose');
+
+    chatToggle.addEventListener('click', () => {
+      chatBox.classList.toggle('active');
+    });
+
+    chatClose.addEventListener('click', () => {
+      chatBox.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

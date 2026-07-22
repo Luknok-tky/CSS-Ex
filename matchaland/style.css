@@ -1,0 +1,515 @@
+/* ==========================================================================
+   1. VARIABLES & RESET (Muji & Minimal Theme)
+   ========================================================================== */
+:root {
+  --bg-color: #F8F6F0;          
+  --card-bg: #FFFFFF;           
+  --primary-green: #5B6E50;     
+  --primary-hover: #48583E;
+  --text-main: #2D312E;         
+  --text-muted: #737A74;
+  --accent-wood: #C5B39B;       
+  --font-base: 'Prompt', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+.navbar {
+  background: rgba(248, 246, 240, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #EAE6DF;
+  padding: 16px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--primary-green);
+  font-weight: 300;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-green);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (รูปภาพ + วิดีโอ)
+   ========================================================================== */
+.hero {
+  padding: 60px 0;
+  background-color: #F8F6F0;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #EAE6DF;
+}
+
+.hero-text h1 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.hero-video-box {
+  background: #FFFFFF;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #EAE6DF;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ==========================================================================
+   4. BUTTONS & UI COMPONENTS
+   ========================================================================== */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  padding: 12px 32px;
+  border-radius: 50px !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  width: 100%;
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-title h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   5. TASTE PROFILES & PRODUCTS GRID
+   ========================================================================== */
+.taste-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.taste-card {
+  background: var(--card-bg);
+  padding: 32px 24px;
+  border-radius: 8px;
+  border: 1px solid #EAE6DF;
+  text-align: center;
+}
+
+.taste-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #EAE6DF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrapper {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: #F2EFE9;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .img-wrapper img {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: var(--primary-green);
+  color: #FFF;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  flex-grow: 1;
+}
+
+.product-card .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   6. UPCOMING PRODUCT & FOOTER
+   ========================================================================== */
+.upcoming-section {
+  background-color: #EFECE6;
+  padding: 80px 0;
+}
+
+.upcoming-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.upcoming-img img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.upcoming-content .tag {
+  color: var(--primary-green);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.upcoming-content h2 {
+  font-size: 2rem;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.upcoming-content p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.footer {
+  background-color: #262927;
+  color: #D5D8D6;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand h3 {
+  color: #FFF;
+}
+
+.footer-brand span {
+  color: #8CA081;
+}
+
+/* ==========================================================================
+   7. LIVE CHAT WIDGET
+   ========================================================================== */
+.chat-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+.chat-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-family: var(--font-base);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.chat-toggle-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.chat-box {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 320px;
+  background-color: var(--card-bg);
+  border: 1px solid #EAE6DF;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.chat-box.active {
+  display: block;
+}
+
+.chat-header {
+  background-color: #EFECE6;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #EAE6DF;
+}
+
+.chat-brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-avatar {
+  font-size: 1.5rem;
+  background: #FFF;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.chat-header h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.chat-header p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chat-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 16px;
+}
+
+.chat-welcome {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.chat-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #EAE6DF;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  transition: background 0.2s ease;
+}
+
+.chat-option:hover {
+  background-color: var(--bg-color);
+}
+
+.chat-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.chat-text small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   8. RESPONSIVE BREAKPOINTS (1200, 991, 768, 678, 480, 380)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .container { max-width: 960px; }
+}
+
+@media (max-width: 991px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .taste-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .upcoming-container { grid-template-columns: 1fr; gap: 28px; }
+  .footer-content { flex-direction: column; gap: 16px; text-align: center; }
+}
+
+@media (max-width: 678px) {
+  .hero-text h1 { font-size: 1.75rem; }
+  .section { padding: 50px 0; }
+}
+
+@media (max-width: 480px) {
+  .nav-links { display: none; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .product-card { padding: 10px; }
+  .chat-widget { bottom: 16px; right: 16px; }
+  .chat-box { width: calc(100vw - 32px); }
+  .chat-toggle-btn span { display: none; }
+  .chat-toggle-btn { padding: 14px; border-radius: 50%; }
+}
+
+@media (max-width: 380px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
